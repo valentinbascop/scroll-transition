@@ -1,0 +1,50 @@
+@import url('https://fonts.cdnfonts.com/css/sao-torpes');
+
+body, html {
+    margin: 0;
+    padding: 0;
+    font-family: 'Sao Torpes', sans-serif;
+  }
+  
+  .block {
+    height: 101vh;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    font-size: 3rem;
+    opacity: 0;
+    transition: opacity 1s ease;
+  }
+  
+  .block.active {
+    opacity: 1;
+  }
+  
+  .block img {
+    max-height: 80vh;
+    margin-right: 20px;
+  }
+  
+  #block1 {
+    background-color: #f9f9f9;
+  }
+  
+  #block2 {
+    background-color: #e6e6e6;
+  }
+  
+  #block3 {
+    background-color: #cccccc;
+  }
+  
+
+  @media screen and (max-width: 1024px) {
+    .block{
+        flex-direction: column-reverse;
+    }
+
+    #block1, #block3{
+        flex-direction: column;
+    }  
+}
